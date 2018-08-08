@@ -25,7 +25,8 @@ class BABeerReviewsSpider(Spider):
 
         # narrow down list to test
         #beer_list = beer_list[1:25]
-        beer_list = beer_list.loc[(beer_list['num_ratings'] >= 1000) & ((beer_list['num_ratings'] < 4500)),]
+        #beer_list = beer_list.loc[(beer_list['num_ratings'] >= 200) & ((beer_list['num_ratings'] < 1000)),]
+        beer_list = beer_list.loc[(beer_list['beer_id'] == 72363),]
 
         # get list of user_agents.  for now, only use first
         user_agent_list = get_user_agent_list()
