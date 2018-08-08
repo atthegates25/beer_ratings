@@ -30,7 +30,7 @@ fluidPage(
 
           sliderInput("beer_abv_slider", label = h3("Abv"), min = min_abv, max = max_abv,
                       value = c(min_abv, 5.5)),
-          sliderInput("beer_num_ratings_slider", label = h3("# Ratings"), min = min_num_ratings, max = max_num_ratings,
+          sliderInput("beer_num_ratings_slider", label = h3("# Ratings"), min = min_num_beer_ratings, max = max_num_beer_ratings,
                       value = c(min_num_beer_ratings, max_num_beer_ratings)),
           sliderInput("beer_rating_slider", label = h3("Rating"), min = 2, max = 5, step=0.05,
                       value = c(2, 5))

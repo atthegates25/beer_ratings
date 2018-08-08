@@ -1,2 +1,4 @@
 runs/
 *.txt
+shiny_app/.RData
+shiny_app/.Rhistory
