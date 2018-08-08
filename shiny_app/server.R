@@ -13,8 +13,7 @@ function(input, output, session) {
   ratings_by_brewery_data = reactive({
     rating_by_beer %>%
       filter(., between(abv, input$brewery_abv_slider[1], input$brewery_abv_slider[2]),
-             between(num_ratings, input$brewery_beer_num_ratings_slider[1], input$brewery_beer_num_ratings_slider[2]),
-             between(user_avg, input$beer_rating_slider[1], input$beer_rating_slider[2])) %>%
+             between(num_ratings, input$brewery_beer_num_ratings_slider[1], input$brewery_beer_num_ratings_slider[2])) %>%
       group_by(., brewery_name, lat, lng) %>%
       summarise(., total_num_ratings=sum(num_ratings), weighted_rating=sum(num_ratings*user_avg)/sum(num_ratings)) %>%
       mutate(., hover_text_by_brewery=paste(brewery_name, paste0("# Ratings: ", total_num_ratings),paste0("Weighted Rating: ", round(weighted_rating,2)),sep='\n')) %>%

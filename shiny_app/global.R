@@ -3,7 +3,7 @@ library(data.table)
 library(tidyverse)
 library(plotly)
 
-rating_by_beer = fread('../runs/20180803/data_files/final_files/Final_US_Beer_Ratings_By_Beer.txt',sep='\t')
+rating_by_beer = fread('data/Final_US_Beer_Ratings_By_Beer.txt',sep='\t')
 
 rating_by_beer = rating_by_beer %>% 
   mutate(., hover_text_by_beer = paste(brewery_name,beer_name,paste0("ABV: ", abv,"%"), paste0("# Ratings: ", num_ratings),paste0("Rating: ", round(user_avg,2)),sep='\n'))

@@ -1,0 +1,12 @@
+name: beer_ratings
+title: beer_ratings
+username:
+account: kevindcannon
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 396983
+bundleId: 1524336
+url: https://kevindcannon.shinyapps.io/beer_ratings/
+when: 1533713738.49286
+asMultiple: FALSE
+asStatic: FALSE
